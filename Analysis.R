@@ -91,3 +91,18 @@ hist(df_2021_clean$daily_vax,
      main = "Histogram of Daily Vaccinations – All 2021 Data",
      xlab = vax_label)
 
+# 8. Comparison of means
+
+# We will run both tests:
+# - t.test (for "normal" data)
+# - wilcox.test (for non-normal data)
+# Then you decide which is more appropriate based on histograms.
+
+# t-test (parametric)
+t_test_result <- t.test(daily_vax ~ period, data = df_2021_clean)
+t_test_result
+
+# Wilcoxon rank-sum test (non-parametric)
+wilcox_result <- wilcox.test(daily_vax ~ period, data = df_2021_clean)
+wilcox_result
+
