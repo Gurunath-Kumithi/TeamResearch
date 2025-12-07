@@ -64,3 +64,12 @@ df_2021_clean <- subset(df_2021_clean, daily_vax <= upper_cutoff)
 summary(df_2021_clean$daily_vax)
 table(df_2021_clean$period)
 
+
+# 6. Descriptive statistics
+
+# Means by group
+aggregate(daily_vax ~ period, df_2021_clean, mean)
+
+# Medians by group
+aggregate(daily_vax ~ period, df_2021_clean, median)
+
