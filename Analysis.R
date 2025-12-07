@@ -73,3 +73,21 @@ aggregate(daily_vax ~ period, df_2021_clean, mean)
 # Medians by group
 aggregate(daily_vax ~ period, df_2021_clean, median)
 
+
+# 7. Check normality with histogram
+
+# Histogram for Early2021
+hist(df_2021_clean$daily_vax[df_2021_clean$period == "Early2021"],
+     main = "Histogram of Daily Vaccinations – Early 2021",
+     xlab = vax_label)
+
+# Histogram for Late2021
+hist(df_2021_clean$daily_vax[df_2021_clean$period == "Late2021"],
+     main = "Histogram of Daily Vaccinations – Late 2021",
+     xlab = vax_label)
+
+# Optional: combined basic check of distribution
+hist(df_2021_clean$daily_vax,
+     main = "Histogram of Daily Vaccinations – All 2021 Data",
+     xlab = vax_label)
+
