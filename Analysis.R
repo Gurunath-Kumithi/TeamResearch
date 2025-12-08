@@ -106,3 +106,12 @@ t_test_result
 wilcox_result <- wilcox.test(daily_vax ~ period, data = df_2021_clean)
 wilcox_result
 
+
+# 9. Boxplot for visual comparison
+
+
+boxplot(daily_vax ~ period,
+        data = df_2021_clean,
+        xlab = "Time Period",
+        ylab = vax_label,
+        main = "Daily Vaccinations: Early 2021 vs Late 2021")
