@@ -1,7 +1,9 @@
+# 1. Setup
 
+# Load libraries
 library(readr)
 
-
+# 2. Read in data
 vacc_data <- read_csv("us_state_vaccinations.csv")
 
 # Have a quick look at the structure of the dataset
@@ -115,3 +117,4 @@ boxplot(daily_vax ~ period,
         xlab = "Time Period",
         ylab = vax_label,
         main = "Daily Vaccinations: Early 2021 vs Late 2021")
+
